@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import PlatformDetails from './PlatformDetails';
+import GameDetails from './GameDetails';
 
-function PlatformListItem({id, name}) {
+function GameListItem({id, title}) {
     const [details, setDetails] =useState(null);
 
 
 
     function handleLoadDetails() {
-        fetch(`http://localhost:5000/api/v1/platforms/${id}`)
+        fetch(`https://boiling-mountain-01737.herokuapp.com//api/v1/games/${id}`)
         //fetch(`https://stormy-eyrie-59187.herokuapp.com/v1/doctor/${id}`)
           .then((response) => response.json())
           .then((response) => setDetails(response));
@@ -16,14 +16,14 @@ function PlatformListItem({id, name}) {
 
     return (
     <div>
-        <a  href="#" onClick={handleLoadDetails}>
-            {name}
+        <a href="#" onClick={handleLoadDetails}>
+            {title}
         </a>
         {
             details && (
-                <PlatformDetails
+                <GameDetails
                 release_date = {details.release_date}
-                specifications = {details.specifications}
+                platforms = {details.platforms}
                 />
             )
             
@@ -32,9 +32,9 @@ function PlatformListItem({id, name}) {
     );
 }
 
-PlatformListItem.propTypes = {
+GameListItem.propTypes = {
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired
 }
 
-export default PlatformListItem
+export default GameListItem

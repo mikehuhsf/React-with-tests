@@ -25,4 +25,4 @@ const PlatformsList = () => {
   );
 };
 
-export default PlatformsList;
+//export default PlatformsList;
