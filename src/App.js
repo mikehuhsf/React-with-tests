@@ -5,7 +5,7 @@ import './App.css';
 function App(props) {
   return (
   <>
-  <h1>Team 115's Awesome Assignment</h1>
+  <h3>Video Game Reference List</h3>
   <GameList/>
   <PlatformList/>
   </>
