@@ -16,9 +16,11 @@ function PlatformListItem({id, name}) {
 
     return (
     <div>
-        <a  href="#" onClick={handleLoadDetails}>
+        {/* <a  href="#" onClick={handleLoadDetails}>
             {name}
-        </a>
+        </a> */
+        <button  className="platform-button" onClick={handleLoadDetails}>
+        {name}</button>}
         {
             details && (
                 <PlatformDetails

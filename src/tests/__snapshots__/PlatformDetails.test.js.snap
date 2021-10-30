@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`display specificaions info when there is one 1`] = `
+exports[`display specifications info when that info exists 1`] = `
 Array [
   <h5>
     Release Date: 

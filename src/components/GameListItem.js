@@ -16,9 +16,11 @@ function GameListItem({id, title}) {
 
     return (
     <div>
-        <a href="#" onClick={handleLoadDetails}>
+        {/* <a href="#" onClick={handleLoadDetails}>
             {title}
-        </a>
+        </a> */
+        <button  className="game-button" onClick={handleLoadDetails}>
+        {title}</button>}
         {
             details && (
                 <GameDetails

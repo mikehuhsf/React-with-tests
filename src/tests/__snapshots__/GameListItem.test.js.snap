@@ -3,10 +3,10 @@
 exports[`renders a drop down when clicked 1`] = `
 <div>
   <button
-    className="platform-button"
+    className="game-button"
     onClick={[Function]}
   >
-    iPhone13
+    amongus
   </button>
 </div>
 `;

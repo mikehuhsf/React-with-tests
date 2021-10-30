@@ -1,16 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import PlatformListItem from "../components/PlatformListItemRest";
-import { specifications } from '../tools/mockSpecifications';
 import { shallow } from '../enzyme';
 
 it("renders a drop down when clicked", () => {
-    const wrapper = renderer.create(<PlatformListItem name='iPhone13' release_date='2021-09-24' specifications={specifications}/>);
+    const wrapper = renderer.create(<PlatformListItem id={1} name='iPhone13'/>);
     expect(wrapper).toMatchSnapshot();
 })
 
-it('should find 1 href named name', () => {
-    const wrapper = shallow(<PlatformListItem />);
-    expect(wrapper.find('.button-increment').text()).toEqual('Increment');
-
-  });
+it('should find 1 button named the input name', () => {
+    const wrapper = shallow(<PlatformListItem id={1} name='iPhone11' />);
+    //console.log(wrapper);
+    expect(wrapper.find('.platform-button').render().text()).toEqual('iPhone11');
+  });   
