@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a drop down whenn clicked 1`] = `
+<div>
+  <a
+    href="#"
+    onClick={[Function]}
+  >
+    iPhone13
+  </a>
+</div>
+`;
